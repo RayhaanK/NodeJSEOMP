@@ -3,7 +3,7 @@
         <div class="container-fluid text-center">
             <div class="row align-items-start">
                 <div class="col fcols">
-                    <i class="bi bi-telephone social1">+27 12 345 6789</i>
+                    <i class="bi bi-telephone social1">+27 12 345 6789</i> <br>
                     <i class="bi bi-envelope social1"> royalLux@gmail.com</i>
                 </div>
                 <div class="col fcols1">
@@ -33,20 +33,20 @@ export default {
 .social {
     font-size: 30px;
     margin-right: 20px;
-    color: #92700F;
+    color: #ffffff;
 }
 .social:hover {
-    color: rgb(255, 252, 252);
+    color: #92700F;
     font-size: 35px;
     transition: 0.4s;
 }
 .social1 {
     font-size: 20px;
     margin-right: 20px;
-    color: #92700F;
+    color: #ffffff;
 }
 .social1:hover {
-    color: rgb(255, 255, 255);
+    color: #92700F;
     font-size: 22px;
     transition: 0.4s;
 }

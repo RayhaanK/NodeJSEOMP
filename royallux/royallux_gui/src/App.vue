@@ -23,4 +23,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
+
+li {
+  text-decoration: none;
+  list-style-type: none;
+}
 </style>
