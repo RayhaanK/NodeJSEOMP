@@ -16,7 +16,7 @@ app.use((req, res, next)=>{
     next()
 })
 
-routes.get('^/$|/challenger',(req, res)=>{
+routes.get('^/$|/home',(req, res)=>{
     res.sendFile(path.resolve(__dirname, './static/HTML/index.html'))
 })
 
