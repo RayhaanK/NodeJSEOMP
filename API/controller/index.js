@@ -15,7 +15,7 @@ routes.get('/user/:id', (req, res)=>{
 routes.post('/user', bodyParser.json(), (req, res)=>{
     users.register(req, res)
 })
-routes.post('/user',
+routes.post('/login',
 bodyParser.json(), (req, res)=>{
     users.login(req, res)
 })
