@@ -1,7 +1,7 @@
 // Controller
 const express = require('express')
 const bodyParser = require('body-parser')
-const {verrifyAToken} = require('../middleware/AuthenticateUser')
+const {verifyAToken} = require('../middleware/AuthenticateUser')
 const routes = express.Router()
 const {users} = require('../model')
 
@@ -28,3 +28,9 @@ routes.patch('/user/:id', bodyParser.json(), (req, res)=>{
 routes.delete('/user/:id', (req, res)=>{
     users.deleteUser(req, res)
 })
+
+module.exports = {
+    express,
+    routes,
+    verifyAToken
+}
