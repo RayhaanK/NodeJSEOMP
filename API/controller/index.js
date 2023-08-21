@@ -3,7 +3,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const {verifyAToken} = require('../middleware/AuthenticateUser')
 const routes = express.Router()
-const {users} = require('../model')
+const {users, products} = require('../model')
 
 // ================User's Router=================
 routes.get('/users', (req, res)=>{
@@ -28,6 +28,31 @@ routes.patch('/user/:id', bodyParser.json(), (req, res)=>{
 routes.delete('/user/:id', (req, res)=>{
     users.deleteUser(req, res)
 })
+
+// ================Product's Router=================
+routes.post('/product', bodyParser.json(), (req, res)=>{
+    products.addProduct(req, res)
+})
+
+routes.get('/products', (req, res)=>{
+    products.fetchProducts(req, res)
+})
+
+routes.get('/product/:id', (req, res)=>{
+    products.fetchProduct(req, res)
+})
+
+routes.put('/product/:id', bodyParser.json(), (req, res)=>{
+    products.updateProduct(req, res)
+})
+routes.patch('/product/:id', bodyParser.json(), (req, res)=>{
+    products.updateProduct(req, res)
+})
+
+routes.delete('/product/:id', (req, res)=>{
+    products.deleteProduct(req, res)
+})
+
 
 module.exports = {
     express,
