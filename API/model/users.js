@@ -35,7 +35,7 @@ class Users {
   fetchUser(req, res) {
     const id = req.params.id;
     const query = `
-          SELECT userID, firstName, lastName, userAge, gender, userRole, emailAdd, userPass, profilePass
+          SELECT userID, firstName, lastName, userAge, gender, userRole, emailAdd, userPass, userProfile
           FROM Users
           WHERE userID = ?
           `;
@@ -53,7 +53,7 @@ class Users {
     const { emailAdd, userPass } = req.body;
     // query
     const query = `
-      SELECT userID, firstName, lastName, userAge, gender, userRole, emailAdd, userPass, profilePass
+      SELECT userID, firstName, lastName, userAge, gender, userRole, emailAdd, userPass, userProfile
       FROM Users
       WHERE emailAdd = ?;
       `;
@@ -92,7 +92,7 @@ class Users {
       // Fetch All Users
       fetchUsers(req, res) {
         const query = `
-              SELECT userID, firstName, lastName, userAge, gender, userRole, emailAdd, userPass, profilePass
+              SELECT userID, firstName, lastName, userAge, gender, userRole, emailAdd, userPass, userProfile
               FROM Users;
               `;
         db.query(query, (err, results) => {
@@ -108,7 +108,7 @@ class Users {
   fetchUser(req, res) {
     const id = req.params.id;
     const query = `
-          SELECT userID, firstName, lastName, userAge, gender, userRole, emailAdd, userPass, profilePass
+          SELECT userID, firstName, lastName, userAge, gender, userRole, emailAdd, userPass, userProfile
           FROM Users
           WHERE userID = ?
           `;
