@@ -23,6 +23,7 @@ class Users {
       if (err) throw err;
       //   Create token
       let token = createToken(user);
+      console.log(token);
       res.json({
         status: res.statusCode,
         token,
