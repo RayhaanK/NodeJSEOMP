@@ -21,7 +21,7 @@
                     </li>
                 </ul>
                 <router-link to="/"><img
-                        src="https://i.postimg.cc/3wm7tbxF/Black-and-Green-Modern-Automotive-Logo-removebg-preview.png"
+                        src="https://i.postimg.cc/c4HWTjFg/Screenshot-2023-08-22-112515-removebg-preview.png"
                         alt="logo" style="width: 11rem; margin-right: 33rem;"></router-link>
                 <ul>
                     <li class="nav-item right">
