@@ -25,7 +25,7 @@
                         alt="logo" style="width: 11rem; margin-right: 33rem;"></router-link>
                 <ul>
                     <li class="nav-item right">
-                        <router-link to="/contact">Admin</router-link>
+                        <router-link to="/admin">Admin</router-link>
                     </li>
                 </ul>
                 <!-- <form class="d-flex" role="search">
@@ -57,7 +57,7 @@ a:hover {
 }
 
 nav a.router-link-exact-active {
-    color: white
+    color: #92700F
 }
 
 ul {
