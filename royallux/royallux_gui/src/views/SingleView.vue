@@ -17,7 +17,7 @@
               </div>
               <div class="card-body">
                 <div class="cardText">
-                  <p class="card-text">{{ $route.query.description }}</p>
+                  <p class="card-text">{{ $route.query.content }}</p>
                 </div>
               </div>
               <div>
