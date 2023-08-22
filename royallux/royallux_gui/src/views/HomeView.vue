@@ -6,39 +6,43 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="https://i.postimg.cc/VLbRkdzv/cara1.jpg" class="car d-block" alt="..." loading="lazy" />
+          <img src="https://i.postimg.cc/yxwTgxnC/pexels-jay-pizzle-8664301.jpg" class="car d-block" alt="..."
+            loading="lazy" />
         </div>
         <div class="carousel-item">
-          <img src="https://i.postimg.cc/C5R4DKDv/cara4.jpg" class="car d-block" alt="..." loading="lazy" />
+          <img src="https://i.postimg.cc/zDjrxZkZ/Wallpaper_4k_Porsche_911_Carrera_S_2019_Rear_4k_Wallpaper.jpg"
+            class="car d-block" alt="..." loading="lazy" />
         </div>
         <div class="carousel-item">
-          <img src="https://i.postimg.cc/C5R4DKDv/cara4.jpg" class="car d-block" alt="..." loading="lazy" />
-        </div>
-        <div class="carousel-item">
-          <img src="https://i.postimg.cc/C5R4DKDv/cara4.jpg" class="car d-block" alt="..." loading="lazy" />
+          <img src="https://i.postimg.cc/HsB9T7Nn/g-wagon-rental-cape-town-2023-768x402.jpg" class="car d-block" alt="..."
+            loading="lazy" />
         </div>
       </div>
-    </div>
-    <div>
       <!-- content -->
-      <h1 class="display-1 mt-5">Something</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolor soluta accusamus repudiandae iure sequi
-        pariatur quibusdam, sunt saepe facilis ea tempore ipsum! Itaque fugiat fugit molestias facere consequuntur nisi?
-      </p>
+      <h1 class="display-3 mt-5">Brands</h1>
+      <!-- <div class="d-flex" style="height: 15rem;">
+        <div class="row">
+          <img src="https://i.postimg.cc/SNbXK3NJ/logo-F-1-removebg-preview.png" alt="logo1" style="width: 13rem; height: 15rem;">
+          <img src="https://i.postimg.cc/x8n0tvXY/logo2-removebg-preview.png" alt="logo2" style="width: 15rem; height: 10rem;">
+          <img src="https://i.postimg.cc/DwMwn4Md/logo3-removebg-preview.png" alt="logo4" style="width: 24rem; height: 15rem;">
+          <img src="https://i.postimg.cc/bNQMjcWL/logo5-removebg-preview.png" alt="logo4" style="width: 20rem; height: 15rem;">
+          <img src="https://i.postimg.cc/mDQLYX28/logo4-removebg-preview.png" alt="logo3" style="width: 18rem; height: 15rem;">
+        </div>
+      </div> -->
     </div>
     <!-- latest -->
     <div class="text-center">
       <h1 class="display-1 mt-5">LATEST</h1>
       <div class="row">
         <div class="col g-0">
-          <img src="https://i.postimg.cc/C5R4DKDv/cara4.jpg" class="img-fluid" alt="img">
+          <img src="https://i.postimg.cc/028b3Td9/mario-canino-t-Mz6oe-Q-X8-Q-unsplash.jpg" class="img-fluid" alt="img">
         </div>
         <div class="col g-0">
-          <img src="https://i.postimg.cc/C5R4DKDv/cara4.jpg" class="img-fluid" alt="img">
+          <img src="https://i.postimg.cc/028b3Td9/mario-canino-t-Mz6oe-Q-X8-Q-unsplash.jpg" class="img-fluid" alt="img">
         </div>
       </div>
       <div id="img3">
-        <img src="https://i.postimg.cc/C5R4DKDv/cara4.jpg" class="img-fluid" alt="img">
+        <img src="https://i.postimg.cc/SRLkVxtc/christian-wiediger-CPUIOce-Zz-U-unsplash.jpg" class="img-fluid" alt="img">
       </div>
     </div>
     <!-- featured -->
@@ -122,7 +126,7 @@
 </script>
 
 <style scoped>
- .overlay {
+/* .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -132,15 +136,14 @@
   align-items: center;
   flex-direction: column;
   padding-bottom: 3rem;
-}
-
+} */
 .carousel-item {
   width: 100%;
 }
 
 .car {
   width: 100%;
-  height: 800px;
+  height: 750px;
 }
 
 .feat {
@@ -181,4 +184,5 @@
     padding-bottom: 23rem;
     font-size: 2rem;
   }
-}</style>
+}
+</style>
