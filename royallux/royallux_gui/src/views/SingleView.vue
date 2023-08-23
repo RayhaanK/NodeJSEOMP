@@ -6,7 +6,7 @@
         <div class="container d-flex justify-content-center mb-4">
           <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 mx-sm-5">
           <div class="col g-3 mt-2">
-            <div class="card bg-dark-subtle" style="width: 442px">
+            <div class="card" style="width: 442px">
               <h4 class="text-center prodTitle">{{ $route.query.prodName }}</h4>
               <div class="image">
                 <img
@@ -27,7 +27,7 @@
               </div>
               <div class="addCart">
                 <router-link to="/product"
-                  ><button class="cartBtn">
+                  ><button class="rbtn">
                     Back to Products
                   </button></router-link
                 >
@@ -51,6 +51,28 @@ export default {
 
 body {
   height: 100vh;
+}
+
+.card {
+  background-color: #fff;
+  border: none;
+}
+
+.rbtn {
+  background-color: #84a7a1;
+  color: #001847;
+  border-radius: 1rem;
+  padding: 0.3rem;
+  border: 0;
+  width: 8rem;
+}
+
+.rbtn:hover {
+  background-color: #001847;
+  color: #84a7a1;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+  transition: 0.2s;
+  transform: scale(1.05);
 }
 
 </style>
