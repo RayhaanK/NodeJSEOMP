@@ -23,7 +23,7 @@
             <th scope="col">Actions</th>
           </tr>
         </thead>
-        <tbody id="adminInput">
+        <tbody>
           <tr v-for="product in products" :key="product.prodID">
             <th>
               <div class="tableRows">{{ product.prodID }}</div>
@@ -32,8 +32,8 @@
               <div class="tableRows">{{ product.prodName }}</div>
             </td>
             <td>
-              <div class="  ">
-                <img :src="product.prodUrl" :alt="product.prodName" loading="lazy" />
+              <div class="tableRows">
+                <img class="img-fluid" :src="product.prodUrl" :alt="product.prodName" loading="lazy" />
               </div>
             </td>
             <td>
@@ -153,6 +153,23 @@ export default {
 
 img {
   width: 11rem;
+}
+
+.tableRows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+
+th {
+  text-align: center;
+}
+
+td {
+  height: 150px;
 }
 
 </style>
