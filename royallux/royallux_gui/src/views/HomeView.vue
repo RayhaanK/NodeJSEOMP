@@ -6,53 +6,66 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
+          <img src="https://i.postimg.cc/zfW4DNDz/pexels-jay-pizzle-4141962.jpg" class="car d-block" alt="..."
+            loading="lazy" />
+        </div>
+        <div class="carousel-item">
           <img src="https://i.postimg.cc/yxwTgxnC/pexels-jay-pizzle-8664301.jpg" class="car d-block" alt="..."
             loading="lazy" />
         </div>
         <div class="carousel-item">
-          <img src="https://i.postimg.cc/zDjrxZkZ/Wallpaper_4k_Porsche_911_Carrera_S_2019_Rear_4k_Wallpaper.jpg"
-            class="car d-block" alt="..." loading="lazy" />
-        </div>
-        <div class="carousel-item">
-          <img src="https://i.postimg.cc/HsB9T7Nn/g-wagon-rental-cape-town-2023-768x402.jpg" class="car d-block" alt="..."
+          <img src="https://i.postimg.cc/zfW4DNDz/pexels-jay-pizzle-4141962.jpg" class="car d-block" alt="..."
             loading="lazy" />
         </div>
       </div>
       <!-- content -->
-      <h1 class="display-3 mt-5">Brands</h1>
-      <!-- <div class="d-flex" style="height: 15rem;">
-        <div class="row">
-          <img src="https://i.postimg.cc/SNbXK3NJ/logo-F-1-removebg-preview.png" alt="logo1" style="width: 13rem; height: 15rem;">
-          <img src="https://i.postimg.cc/x8n0tvXY/logo2-removebg-preview.png" alt="logo2" style="width: 15rem; height: 10rem;">
-          <img src="https://i.postimg.cc/DwMwn4Md/logo3-removebg-preview.png" alt="logo4" style="width: 24rem; height: 15rem;">
-          <img src="https://i.postimg.cc/bNQMjcWL/logo5-removebg-preview.png" alt="logo4" style="width: 20rem; height: 15rem;">
-          <img src="https://i.postimg.cc/mDQLYX28/logo4-removebg-preview.png" alt="logo3" style="width: 18rem; height: 15rem;">
+      <h1 class="display-3 mt-5">BRANDS</h1>
+      <div class="container-fluid d-flex justify-content-center" style="height: 16rem;">
+        <div class="row p-3">
+          <div class="col mx-3"><img src="https://i.postimg.cc/sfYkk7wM/logo-2.png" alt="logo1"
+              style="width: 12rem; height: 14rem;"></div>
+          <div class="col mx-3"><img src="https://i.postimg.cc/Wzwx0chG/logo-5.png" alt="logo2"
+              style="width: 12rem; height: 14rem;"></div>
+          <div class="col mx-3">
+            <img src="https://i.postimg.cc/Y0HJ4Cq2/logo-3.png" alt="logo4" style="width: 14rem; height: 12rem;">
+          </div>
+          <div class="col mx-3">
+            <img src="https://i.postimg.cc/tgL0jzKx/logo-4.png" alt="logo4" style="width: 12rem; height: 14rem;">
+          </div>
+          <div class="col mx-3"><img src="https://i.postimg.cc/Y9g5qW7y/logo-1.png" alt="logo3"
+              style="width: 12rem; height: 14rem;"></div>
         </div>
-      </div> -->
+      </div>
+    </div>
+    <div class="container-fluid p-5">
+      <h1 class="display-5 mt-5">COMMITMENT TO PERFORMANCE</h1><hr>
+      <h2 class="p-6 mx-5">Founded on the passion for cars and the commitment to offering a superior level of service to motoring enthusiasts. Providing all-inclusive services for clients, Royal Lux Motors specializes in classic and modern luxury vehicles.</h2>
     </div>
     <!-- latest -->
-    <div class="text-center">
-      <h1 class="display-1 mt-5">LATEST</h1>
-      <div class="row">
-        <div class="col g-0">
-          <img src="https://i.postimg.cc/028b3Td9/mario-canino-t-Mz6oe-Q-X8-Q-unsplash.jpg" class="img-fluid" alt="img">
-        </div>
-        <div class="col g-0">
-          <img src="https://i.postimg.cc/028b3Td9/mario-canino-t-Mz6oe-Q-X8-Q-unsplash.jpg" class="img-fluid" alt="img">
-        </div>
-      </div>
-      <div id="img3">
-        <img src="https://i.postimg.cc/SRLkVxtc/christian-wiediger-CPUIOce-Zz-U-unsplash.jpg" class="img-fluid" alt="img">
-      </div>
+    <div class="container-fluid text-center">
+      <!-- <h1 class="display-3 mt-5">LATEST</h1> -->
+  <div class="row">
+    <div class="col b1">
+      <img src="https://i.postimg.cc/fLyFY37V/pexels-styves-exantus-9914070.jpg" class="img-fluid" alt="img1">
     </div>
+    <div class="col b2">
+      <img src="https://i.postimg.cc/wTF3QzNP/tim-meyer-7yi-Syh-TLpoc-unsplash.jpg"  class="img-fluid" alt="img2">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col b4">
+      <img src="https://i.postimg.cc/26KB4YkP/tim-meyer-A41ic-Gx-M1-JY-unsplash.jpg"  class="img-fluid b3" alt="img3">
+    </div>
+  </div>
+</div>
     <!-- featured -->
-    <h1 class="display-1 mt-5">FEATURED</h1>
+    <h1 class="display-3 mt-5">FEATURED</h1><div class="infoo">
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
+        <div class="carousel-item active" data-bs-interval="9000">
           <div class="row feat1">
             <div class="column feat">
-              <img src="https://i.postimg.cc/yxZ63xCT/002_B800_3_4_front-1920x1281-removebg-preview.png" alt="Snow"
+              <img src="https://i.postimg.cc/nz7FbVmT/PROD6.png" alt="Snow"
                 style="width:100%">
             </div>
             <div class="column feat">
@@ -60,7 +73,7 @@
                 style="width:100%">
             </div>
             <div class="column feat">
-              <img src="https://i.postimg.cc/yxZ63xCT/002_B800_3_4_front-1920x1281-removebg-preview.png" alt="Mountains"
+              <img src="https://i.postimg.cc/HkTPdgZp/PROD7-1.png" alt="Mountains"
                 style="width:100%">
             </div>
           </div>
@@ -72,23 +85,23 @@
                 style="width:100%">
             </div>
             <div class="column feat">
-              <img src="https://i.postimg.cc/yxZ63xCT/002_B800_3_4_front-1920x1281-removebg-preview.png" alt="Forest"
+              <img src="https://i.postimg.cc/HkTPdgZp/PROD7-1.png" alt="Forest"
                 style="width:100%">
             </div>
             <div class="column feat">
-              <img src="https://i.postimg.cc/yxZ63xCT/002_B800_3_4_front-1920x1281-removebg-preview.png" alt="Mountains"
+              <img src="https://i.postimg.cc/nz7FbVmT/PROD6.png" alt="Mountains"
                 style="width:100%">
             </div>
           </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" data-bs-interval="2000">
           <div class="row feat1">
             <div class="column feat">
-              <img src="https://i.postimg.cc/yxZ63xCT/002_B800_3_4_front-1920x1281-removebg-preview.png" alt="Snow"
+              <img src="https://i.postimg.cc/HkTPdgZp/PROD7-1.png" alt="Snow"
                 style="width:100%">
             </div>
             <div class="column feat">
-              <img src="https://i.postimg.cc/yxZ63xCT/002_B800_3_4_front-1920x1281-removebg-preview.png" alt="Forest"
+              <img src="https://i.postimg.cc/nz7FbVmT/PROD6.png" alt="Forest"
                 style="width:100%">
             </div>
             <div class="column feat">
@@ -107,23 +120,12 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    <div class="container">
-      <h1 class="display-1 mt-5">Something</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa minus eos consectetur possimus ad labore aliquid
-        unde dolores nemo, voluptate necessitatibus minima repudiandae obcaecati, omnis, ut sequi expedita mollitia
-        eligendi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores officia maiores ipsa incidunt
-        voluptatum adipisci sed inventore, eligendi atque aperiam ducimus dolorum itaque distinctio nam necessitatibus
-        nostrum veniam nemo autem.</p>
-    </div>
-    <div class="container">
-      <router-link to="/product" class="btn btn-primary">View More</router-link>
+  </div>
+    <div class="container p-5">
+      <router-link to="/product" class="btn vm border-black">View More</router-link>
     </div>
   </div>
 </template>
-
-<script>
-
-</script>
 
 <style scoped>
 /* .overlay {
@@ -143,13 +145,31 @@
 
 .car {
   width: 100%;
-  height: 750px;
+  height: 780px;
+  object-fit: cover;
 }
 
 .feat {
   float: left;
   width: 33.33%;
   padding: 5px;
+}
+.b1, .b2 {
+  padding: 0;
+  object-fit: cover;
+}
+.b3{
+  padding: 0;
+  object-fit: cover;
+  margin: 0;
+  width: 100rem;
+}
+.b4{
+  padding: 0;
+}
+.vm{
+background: black;
+color: white;
 }
 
 /* Clear floats after image containers */

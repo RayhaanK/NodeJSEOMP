@@ -11,7 +11,7 @@
                     <i class="social bi bi-tiktok"><a href="https://www.tiktok.com/login"></a></i>
                     <i class="social bi bi-facebook"><a href="https://m.facebook.com/login/?locale=en_GB"></a></i>
                 </div>
-                <small class="text-body-secondary fcols1">Copyright&copy;</small>
+                <p class="text-white fcols1">Copyright&copy;</p>
             </div>
         </div>
     </div>
@@ -36,7 +36,7 @@ export default {
     color: #ffffff;
 }
 .social:hover {
-    color: #92700F;
+    color: #f7f7f788;
     font-size: 35px;
     transition: 0.4s;
 }
@@ -46,7 +46,7 @@ export default {
     color: #ffffff;
 }
 .social1:hover {
-    color: #92700F;
+    color: #f7f7f788;
     font-size: 22px;
     transition: 0.4s;
 }
