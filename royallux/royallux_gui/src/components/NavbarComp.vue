@@ -50,7 +50,7 @@ a {
     text-decoration: none;
     color: #ffffff;
     font-size: 22px;
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
 }
 
 a:hover {
