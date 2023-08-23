@@ -12,8 +12,6 @@ export default createStore({
     spinner: false,
     token: null,
     msg: null,
-    postResponse: null,
-    postStatus: null,
   },
   getters: {},
   mutations: {
@@ -38,8 +36,11 @@ export default createStore({
     setMsg(state, msg) {
       state.msg = msg;
     },
-    addProduct(state, status) {
-      state.postStatus = status;
+    addProduct(state, product) {
+      state.product = product;
+    },
+    dltProduct(state, product) {
+      state.product = product;
     },
   },
   actions: {
@@ -64,6 +65,20 @@ export default createStore({
         const response = await axios.post(`${dataUrl}product`, payload);
         if (response) {
           context.commit("addProduct", response.data);
+          location.reload()
+          console.log(response.data);
+        } else {
+          context.commit("setMsg", "An error has occured");
+        }
+      } catch (e) {
+        context.commit("setMsg", "An error has occured");
+      }
+    },
+    async deleteProduct(context, prodID) {
+      try {
+        const response = (await axios.delete(`${dataUrl}product/:${prodID}`));
+        if (response) {
+          context.commit("dltProduct", response.data);
           location.reload()
           console.log(response.data);
         } else {
