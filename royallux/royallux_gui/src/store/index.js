@@ -12,7 +12,8 @@ export default createStore({
     spinner: false,
     token: null,
     msg: null,
-    postProduct: null
+    postResponse: null,
+    postStatus: null
   },
   getters: {
   },
@@ -38,9 +39,12 @@ export default createStore({
     setMsg(state, msg) {
       state.msg = msg
     },
-    addProduct(state, response) {
-      state.postProduct = response
-    }
+    setPostStatus(state, status) {
+      state.postStatus = status
+    },
+    setPostResponse(state, response) {
+      state.postResponse = response
+    },
   },
   actions: {
     async fetchUsers(context) {
@@ -59,12 +63,16 @@ export default createStore({
         context.commit("setMsg", "An error has occured")
       }
     },
-    async submitProduct({commit}, product) {
+    async submitProduct({commit}, context, postProduct) {
       try {
-        const response = await axios.post(`${dataUrl}product`, product)
-        commit('addProduct', response.data)
+        const response = await axios.post(`${dataUrl}product`, postProduct)
+        commit('setPostResponse', response.data)
+        if(response) {
+          context.dispatch('fetchProducts')
+          console.log(response.data);
+        }
       } catch(e) {
-        commit("setMsg", "An error has occured")
+        commit("setPostStatus", "An error has occured")
       }
   },
 },
