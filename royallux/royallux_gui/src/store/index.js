@@ -1,7 +1,7 @@
-import { createStore } from 'vuex'
-import axios from 'axios'
+import { createStore } from "vuex";
+import axios from "axios";
 
-const dataUrl = "https://royallux.onrender.com/"
+const dataUrl = "https://royallux.onrender.com/";
 
 export default createStore({
   state: {
@@ -13,66 +13,67 @@ export default createStore({
     token: null,
     msg: null,
     postResponse: null,
-    postStatus: null
+    postStatus: null,
   },
-  getters: {
-  },
+  getters: {},
   mutations: {
     setUsers(state, users) {
-      state.users = users
+      state.users = users;
     },
     setUser(state, user) {
-      state.user = user
+      state.user = user;
     },
     setProducts(state, products) {
-      state.products = products
+      state.products = products;
     },
     setProduct(state, product) {
-      state.product = product
+      state.product = product;
     },
     setSpinner(state, value) {
-      state.spinner = value
+      state.spinner = value;
     },
     setToken(state, token) {
-      state.token = token
+      state.token = token;
     },
     setMsg(state, msg) {
-      state.msg = msg
+      state.msg = msg;
     },
-    setPostStatus(state, status) {
-      state.postStatus = status
-    },
-    setPostResponse(state, response) {
-      state.postResponse = response
+    addProduct(state, status) {
+      state.postStatus = status;
     },
   },
   actions: {
     async fetchUsers(context) {
       try {
-        const {data} = await axios.get(`${dataUrl}users`)
-        context.commit("setUsers", data.results)
-      } catch(e) {
-        context.commit("setMsg", "An error has occured")
+        const { data } = await axios.get(`${dataUrl}users`);
+        context.commit("setUsers", data.results);
+      } catch (e) {
+        context.commit("setMsg", "An error has occured");
       }
     },
     async fetchProducts(context) {
       try {
-        const {data} = await axios.get(`${dataUrl}products`)
-        context.commit("setProducts", data.results)
-      } catch(e) {
-        context.commit("setMsg", "An error has occured")
+        const { data } = await axios.get(`${dataUrl}products`);
+        context.commit("setProducts", data.results);
+      } catch (e) {
+        context.commit("setMsg", "An error has occured");
       }
     },
-    async submitProduct({commit}, context, postProduct) {
+    async submitProduct(context, payload) {
       try {
-        const response = await axios.post(`${dataUrl}product`, postProduct)
-        commit('setPostResponse', response.data)
+        const response = await axios.post(`${dataUrl}product`, payload);
+        if (response) {
+          context.commit("addProduct", response.data);
+          location.reload()
           console.log(response.data);
-      } catch(e) {
-        commit("setPostStatus", "An error has occured")
+        } else {
+          context.commit("setMsg", "An error has occured");
+        }
+      } catch (e) {
+        context.commit("setMsg", "An error has occured");
       }
+    },
   },
-},
 
-  modules: { }
-});      
+  modules: {},
+});
