@@ -63,4 +63,19 @@ nav a.router-link-exact-active {
 ul {
     text-decoration: none;
 }
+
+
+@media (max-width: 1400px) {
+    img {
+        width: 9rem;
+        margin-right: 15rem;
+    }
+}
+
+@media (max-width: 1255px) {
+    img {
+        width: 9rem;
+        margin-right: 10rem;
+    }
+}
 </style>
