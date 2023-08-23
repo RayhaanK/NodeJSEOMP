@@ -11,7 +11,8 @@ export default createStore({
     product: null,
     spinner: false,
     token: null,
-    msg: null
+    msg: null,
+    postProduct: null
   },
   getters: {
   },
@@ -36,6 +37,9 @@ export default createStore({
     },
     setMsg(state, msg) {
       state.msg = msg
+    },
+    addProduct(state, response) {
+      state.postProduct = response
     }
   },
   actions: {
@@ -54,8 +58,16 @@ export default createStore({
       } catch(e) {
         context.commit("setMsg", "An error has occured")
       }
-    }
+    },
+    async submitProduct({commit}, product) {
+      try {
+        const response = await axios.post(`${dataUrl}product`, product)
+        commit('addProduct', response.data)
+      } catch(e) {
+        commit("setMsg", "An error has occured")
+      }
   },
-  modules: {
-  }
-})
+},
+
+  modules: { }
+});      
