@@ -67,10 +67,7 @@ export default createStore({
       try {
         const response = await axios.post(`${dataUrl}product`, postProduct)
         commit('setPostResponse', response.data)
-        if(response) {
-          context.dispatch('fetchProducts')
           console.log(response.data);
-        }
       } catch(e) {
         commit("setPostStatus", "An error has occured")
       }
