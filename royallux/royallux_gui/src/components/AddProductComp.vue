@@ -30,8 +30,8 @@
                 aria-label="Close"
               ></button>
             </div>
+            <form @submit.prevent="submitContentForm">
             <div class="modal-body">
-              <form @submit.prevent="postItem">
                 <p class="title">Product Name</p>
                 <input type="text" v-model="postProduct.prodName" id="title" />
                 <p class="title">Category</p>
@@ -62,20 +62,20 @@
                 v-model="postProduct.prodUrl"
                 id="imageLink"
                 />
-              </form>
               </div>
               <div class="modal-footer">
-              <button type="button" class="btn1" data-bs-dismiss="modal">
-                Close
-              </button>
-              <button
+                <button type="button" class="btn1" data-bs-dismiss="modal">
+                  Close
+                </button>
+                <button
                 type="submit"
                 class="btn1"
                 id="addProduct"
-              >
+                >
                 Save changes
               </button>
             </div>
+          </form>
           </div>
         </div>
       </div>
@@ -102,9 +102,8 @@ export default {
   computed: {
   },
   methods: {
-    ...mapActions(['submitProduct']), 
-    async postItem() {
-      await this.submitProduct(this.product)
+    async submitContentForm() {
+      this.$store.dispatch('submitProduct', this.postProduct) 
     }
   }
 };
