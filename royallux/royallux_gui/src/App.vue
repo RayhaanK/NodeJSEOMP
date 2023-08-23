@@ -9,7 +9,6 @@
 import Navbar from '@/components/NavbarComp.vue'
 import Footer from '@/components/FooterComp.vue'
 export default {
-  name: 'HomeView',
   components: {
     Navbar,
     Footer
