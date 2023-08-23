@@ -1,7 +1,7 @@
 <template>
   <div class="about container-fluid text-center">
-    <img src="https://i.postimg.cc/3rB7XpHw/pro3.jpg" class="bg" alt="">
-    <h1 class="display-2 p-4">Who we are</h1>
+    <img src="https://i.postimg.cc/K8sxsJrd/33137.jpg" class="bg" alt="">
+    <h1 class="display-2 p-4 who">Who we are</h1>
     <p class="ab1 mb-5">We sell modern, individual luxury. <br> <br> With innovative technology, highest-quality materials,
       unwavering attention to detail and tasteful, dynamic aesthetics, we sell products with the Wow factor that
       underline our customers personalities. <br> <br> Based in the heart of Cape Town in South Africa, the mother city
@@ -53,7 +53,7 @@
     </div>
     <!-- accordian -->
     <div class="info mx-auto p-5" style="width: 50rem; font-size: 1.5rem;">
-      <h1 class="display-3">Read More</h1>
+      <h1 class="display-3 who">Read More</h1>
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header text-center">
@@ -116,11 +116,16 @@
   width: 100%;
   height: 40rem;
 }
-
+.who{
+  text-shadow: 3px 2px 3px rgb(118, 112, 112);
+}
 .accordion-button {
   outline: none !important;
 }
-
+.accordion-button{
+    color: rgb(0, 0, 0);
+    background: #e2dede96;
+}
 .about {
   padding: 0;
 }
