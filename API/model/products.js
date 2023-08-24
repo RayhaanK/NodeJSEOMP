@@ -82,6 +82,22 @@ class Products {
     });
   }
 
+  // Fetching 4 Products
+  featuredProducts(req, res) {
+    const query = `
+              SELECT prodID, prodName, quantity, amount, category, details, content, prodUrl
+              FROM Products;
+              LIMIT 4
+              `;
+        db.query(query, (err, results) => {
+          if (err) throw err;
+          res.json({
+            status: res.statusCode,
+            results,
+          });
+        });
+  }
+
 }
 
 module.exports = Products;
