@@ -17,15 +17,8 @@
               <router-link 
               :to="{
                   name: 'single',
-                  params: { id: product.prodID },
-                  query: {
-                    name: product.prodName,
-                    description: product.details,
-                    img: product.prodUrl,
-                    price: product.amount,
-                    content: product.content
-                  },
-                }"
+                  params: { prodID: product.prodID }
+                  }"
                ><button class="rbtn mt-2">View Product</button></router-link>
             </div>
           </div>
@@ -46,13 +39,6 @@ export default {
     this.$store.dispatch("fetchProducts");
   },
   methods: {
-    viewProduct() {
-      this.$router.push({
-        name: this.name,
-        params: this.params.id,
-        query: this.query.name
-      })
-    }
   }
 };
 </script>
