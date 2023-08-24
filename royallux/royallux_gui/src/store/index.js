@@ -42,6 +42,9 @@ export default createStore({
     dltProduct(state, product) {
       state.product = product;
     },
+    editProduct(state, product) {
+      state.product = product;
+    },
   },
   actions: {
     async fetchUsers(context) {
@@ -79,6 +82,18 @@ export default createStore({
         const response = await axios.delete(`${dataUrl}product/${prodID}`);
         if(response) {
           location.reload()
+          context.commit('dltProduct', response)
+        } else {
+          context.commit("setMsg", "An error has occured");
+        }
+      } catch (e) {
+        context.commit("setMsg", "An error has occured");
+      }
+    },
+    async editProduct(context, prodID) {
+      try {
+        const response = await axios.patch(`${dataUrl}product/${prodID}`);
+        if(response) {
           context.commit('dltProduct', response)
         } else {
           context.commit("setMsg", "An error has occured");
