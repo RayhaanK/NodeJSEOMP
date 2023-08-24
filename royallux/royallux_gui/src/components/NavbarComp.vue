@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
+        <div class="container-fluid ">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -23,18 +23,18 @@
                 </ul>
             </div>
                 <!-- logo -->
-                <div class="logos">
+                <ul class="logos m-auto">
                 <router-link to="/"><img class="logo"
                                 src="https://i.postimg.cc/c4HWTjFg/Screenshot-2023-08-22-112515-removebg-preview.png"
                                 alt="logo" style="width: 11rem; "></router-link>
-                            </div>
+                </ul>
                 <!-- admin -->
-                <div class="adin">
-                    <li class="nav-item right">
+                <ul class="adin ms-auto">
+                    <li class="nav-item right ">
                         <router-link to="/admin" class="nav-link"><i class="bi bi-person" style="color: white;"></i>
                             Admin</router-link>
                         </li>
-                    </div>
+                </ul>
                 <!-- <form class="d-flex" role="search">
                     <input class="form-control m-2 sea" type="search" placeholder="Search Something" aria-label="Search">
                     <button class="btn btn-outline-dark m-2 sea" type="submit">Search</button>
@@ -53,13 +53,9 @@ nav {
 }
 
 .logos{
-    margin-right: 18rem;
+    margin-right: 18rem ;
 }
 
-.nav-con{
-    display: flex !important;
-    justify-content: space-between !important;
-}
 
 a {
     text-decoration: none;
@@ -92,5 +88,11 @@ ul {
         width: 9rem;
         margin-right: 10rem;
     } */
+}
+
+@media (max-width: 992px) {
+    /* .nav-con{
+    display: none !important;
+} */
 }
 </style>
