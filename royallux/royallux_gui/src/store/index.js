@@ -63,6 +63,14 @@ export default createStore({
         context.commit("setMsg", "An error has occured");
       }
     },
+    async fetchProduct(context, prodID) {
+      try {
+        const { data } = await axios.get(`${dataUrl}product/${prodID}`) 
+        context.commit("setProduct", data.result)
+      } catch(e) {
+        context.commit("setMsg", "An error occured")
+      }
+    },
     async submitProduct(context, payload) {
       try {
         const response = await axios.post(`${dataUrl}product`, payload);
