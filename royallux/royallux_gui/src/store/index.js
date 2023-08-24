@@ -74,20 +74,20 @@ export default createStore({
         context.commit("setMsg", "An error has occured");
       }
     },
-    async deleteProduct(context, prodID) {
-      try {
-        const response = (await axios.delete(`${dataUrl}product/:${prodID}`));
-        if (response) {
-          context.commit("dltProduct", response.data);
-          location.reload()
-          console.log(response.data);
-        } else {
-          context.commit("setMsg", "An error has occured");
-        }
-      } catch (e) {
-        context.commit("setMsg", "An error has occured");
-      }
-    },
+    // async deleteProduct(context, prodID) {
+    //   try {
+    //     const response = (await axios.delete(`${dataUrl}product/${prodID}`));
+    //     if (response) {
+    //       context.commit("dltProduct", response.data);
+    //       location.reload()
+    //       console.log(response.data);
+    //     } else {
+    //       context.commit("setMsg", "An error has occured");
+    //     }
+    //   } catch (e) {
+    //     context.commit("setMsg", "An error has occured");
+    //   }
+    // },
   },
 
   modules: {},
