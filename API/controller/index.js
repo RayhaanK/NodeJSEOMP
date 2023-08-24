@@ -42,6 +42,10 @@ routes.get('/product/:id', (req, res)=>{
     products.fetchProduct(req, res)
 })
 
+routes.get('featproducts', (req, res)=> {
+    products.featuredProducts(req, res)
+})
+
 routes.put('/product/:id', bodyParser.json(), (req, res)=>{
     products.updateProduct(req, res)
 })
