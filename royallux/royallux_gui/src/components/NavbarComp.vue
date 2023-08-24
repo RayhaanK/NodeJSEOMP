@@ -5,30 +5,36 @@
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-lg-0 nav-underline">
+            <div class="collapse navbar-collapse nav-con" id="navbarSupportedContent">
+                <div class="routes">
+                <ul class="navbar-nav mb-lg-0 nav-underline">
                     <li class="nav-item" id="homea">
-                        <a href="/"><router-link to="/">Home</router-link></a>
+                        <router-link to="/" class="nav-link">Home</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link to="/about">About</router-link>
+                        <router-link to="/about" class="nav-link">About</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link to="/product">Products</router-link>
+                        <router-link to="/product" class="nav-link">Products</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link to="/contact">Contact</router-link>
+                        <router-link to="/contact" class="nav-link">Contact</router-link>
                     </li>
                 </ul>
-                <router-link to="/"><img
-                        src="https://i.postimg.cc/c4HWTjFg/Screenshot-2023-08-22-112515-removebg-preview.png"
-                        alt="logo" style="width: 11rem; margin-right: 33rem;"></router-link>
-                <ul>
+            </div>
+                <!-- logo -->
+                <div class="logos">
+                <router-link to="/"><img class="logo"
+                                src="https://i.postimg.cc/c4HWTjFg/Screenshot-2023-08-22-112515-removebg-preview.png"
+                                alt="logo" style="width: 11rem; "></router-link>
+                            </div>
+                <!-- admin -->
+                <div class="adin">
                     <li class="nav-item right">
-                        
-                        <router-link to="/admin"><i class="bi bi-person" style="color: white;"></i> Admin</router-link>
-                    </li>
-                </ul>
+                        <router-link to="/admin" class="nav-link"><i class="bi bi-person" style="color: white;"></i>
+                            Admin</router-link>
+                        </li>
+                    </div>
                 <!-- <form class="d-flex" role="search">
                     <input class="form-control m-2 sea" type="search" placeholder="Search Something" aria-label="Search">
                     <button class="btn btn-outline-dark m-2 sea" type="submit">Search</button>
@@ -46,6 +52,15 @@ nav {
     background-color: #000000;
 }
 
+.logos{
+    margin-right: 18rem;
+}
+
+.nav-con{
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
 a {
     text-decoration: none;
     color: #ffffff;
@@ -55,26 +70,27 @@ a {
 
 a:hover {
     color: #f7f7f788;
+
 }
+
 nav a.router-link-exact-active {
-    color: #f7f7f788
+    color: #f7f7f788;
 }
+
 ul {
     text-decoration: none;
 }
-
-
 @media (max-width: 1400px) {
-    img {
+    /* img {
         width: 9rem;
         margin-right: 15rem;
-    }
+    } */
 }
 
 @media (max-width: 1255px) {
-    img {
+    /* img {
         width: 9rem;
         margin-right: 10rem;
-    }
+    } */
 }
 </style>

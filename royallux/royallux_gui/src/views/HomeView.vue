@@ -6,54 +6,67 @@
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="https://i.postimg.cc/3J1K2Kyr/734222.jpg" class="car d-block" alt="..." loading="lazy" />
+          <img src="https://i.postimg.cc/7Z6ZXdvv/2492678.jpg" class="car d-block" alt="..." loading="lazy" />
         </div>
         <div class="carousel-item">
-          <img src="https://i.postimg.cc/s2VDtvth/13674.jpg" class="car d-block" alt="..." loading="lazy" />
+          <img src="https://i.postimg.cc/xTLVVTj9/2492637.jpg" class="car d-block" alt="..." loading="lazy" />
         </div>
+        <!-- <div class="carousel-item">
+          <img src="https://i.postimg.cc/wv1nf9b8/1125168.jpg" class="car d-block" alt="..." loading="lazy" />
+        </div> -->
         <div class="carousel-item">
-          <img src="https://i.postimg.cc/zfB3yy01/33155.jpg" class="car d-block" alt="..." loading="lazy" />
-        </div>
-        <div class="carousel-item">
-          <img src="https://i.postimg.cc/sXmnw05W/13655.jpg" class="car d-block" alt="..." loading="lazy" />
+          <img src="https://i.postimg.cc/LsCr3JD3/2397379.jpg" class="car d-block" alt="..." loading="lazy" />
         </div>
 
       </div>
       <!-- content -->
       <h1 class="display-3 mt-5 who">BRANDS</h1>
-      <div class="container-fluid d-flex justify-content-center" style="height: 16rem;">
-        <div class="row p-3">
+      <div class="container-fluid d-flex justify-content-center" style="height: 100%;">
+        <div class="row p-3 br">
           <div class="col mx-3"><img src="https://i.postimg.cc/sfYkk7wM/logo-2.png" alt="logo1"
-              style="width: 10rem; height: 10rem;"></div>
+              style="width: 11rem; height: 12rem;"></div>
           <div class="col mx-3"><img src="https://i.postimg.cc/Wzwx0chG/logo-5.png" alt="logo2"
-              style="width: 10rem; height: 10rem;"></div>
+              style="width: 10rem; height: 12rem;"></div>
           <div class="col mx-3">
-            <img src="https://i.postimg.cc/Y0HJ4Cq2/logo-3.png" alt="logo4" style="width: 10rem; height: 10rem;">
+            <img src="https://i.postimg.cc/6psmXyBY/Screenshot-2023-08-24-124411-removebg-preview.png" alt="logo4"
+              style="width: 11rem; height: 12rem;">
           </div>
           <div class="col mx-3">
-            <img src="https://i.postimg.cc/tgL0jzKx/logo-4.png" alt="logo4" style="width: 10rem; height: 10rem;">
+            <img src="https://i.postimg.cc/fbf1zXCM/Screenshot-2023-08-24-125206-removebg-preview.png" alt="logo4"
+              style="width: 11rem; height: 12rem;">
           </div>
           <div class="col mx-3"><img src="https://i.postimg.cc/Y9g5qW7y/logo-1.png" alt="logo3"
-              style="width: 10rem; height: 10rem;"></div>
+              style="width: 11rem; height: 12rem;"></div>
         </div>
       </div>
     </div>
-    <div class="container-fluid p-5">
-      <h1 class="display-5 mt-5 who">COMMITMENT TO PERFORMANCE</h1>
-      <hr>
-      <h2 class="p-6 mx-5">Founded on the passion for cars and the commitment to offering a superior level of service to
-        motoring enthusiasts. Providing all-inclusive services for clients, Royal Lux Motors specializes in classic and
-        modern luxury vehicles.</h2>
+    <hr>
+    <div class="container-fluid p-4">
+      <h1 class="display-4 mt-5 who">COMMITMENT TO PERFORMANCE</h1>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+          </div>
+          <div class="col-6">
+            <h2 class="p-4 par">Founded on the passion for cars and the commitment to offering a superior level of service to
+              motoring enthusiasts. Providing all-inclusive vehicles for clients, Royal Lux Motors specializes in classic
+              and modern luxury vehicles.</h2>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+      </div>
+
     </div>
     <!-- latest -->
     <div class="container-fluid text-center">
       <!-- <h1 class="display-3 mt-5">LATEST</h1> -->
       <div class="row">
         <div class="col b1">
-          <img src="https://i.postimg.cc/wTF3QzNP/tim-meyer-7yi-Syh-TLpoc-unsplash.jpg" class="img-fluid" alt="img1">
+          <img src="https://i.postimg.cc/kg4GjHF5/tim-meyer-A41ic-Gx-M1-JY-unsplash.jpg" class="img-fluid" alt="img1">
         </div>
         <div class="col b2">
-          <img src="https://i.postimg.cc/kg4GjHF5/tim-meyer-A41ic-Gx-M1-JY-unsplash.jpg" class="img-fluid" alt="img2">
+          <img src="https://i.postimg.cc/wTF3QzNP/tim-meyer-7yi-Syh-TLpoc-unsplash.jpg" class="img-fluid" alt="img2">
         </div>
       </div>
       <div class="row">
@@ -63,7 +76,7 @@
       </div>
     </div>
     <!-- featured -->
-    <h1 class="display-3 mt-5">FEATURED</h1>
+    <h1 class="display-3 mt-5 who">FEATURED</h1>
     <div class="infoo">
       <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -143,15 +156,19 @@
 .carousel-item {
   width: 100%;
 }
-
+.par{
+  line-height: 3.5rem;
+}
 .car {
   width: 100%;
   height: 770px;
   object-fit: cover;
 }
-.who{
+
+.who {
   text-shadow: 3px 2px 3px rgb(118, 112, 112);
 }
+
 .feat {
   float: left;
   width: 33.33%;
@@ -187,7 +204,8 @@
   display: table;
 }
 
-@media screen and (max-width: 650px) {
+/* 
+@media screen and (min-width: 650px) {
   .carousel {
     height: 10rem !important;
   }
@@ -212,5 +230,5 @@
     padding-bottom: 23rem;
     font-size: 2rem;
   }
-}
+} */
 </style>
