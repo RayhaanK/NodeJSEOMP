@@ -99,7 +99,7 @@
                     </div>
                   </div>
                 </div>
-                <button @click.prevent="deleteProduct" class="btn1" id="deleteBtn">Delete</button>
+                <button class="btn1" id="deleteBtn">Delete</button>
               </div>
             </td>
           </tr>
@@ -122,7 +122,7 @@ export default {
   },
   mounted() {
     this.$store.dispatch("fetchProducts");
-    this.$store.dispatch("deleteProduct")
+    // this.$store.dispatch("deleteProduct")
   }
 };
 </script>
