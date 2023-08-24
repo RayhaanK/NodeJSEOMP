@@ -99,7 +99,7 @@
                     </div>
                   </div>
                 </div>
-                <button class="btn1" id="deleteBtn">Delete</button>
+                <button @click.prevent="deleteContent(product.prodID)" class="btn1" id="deleteBtn">Delete</button>
               </div>
             </td>
           </tr>
@@ -122,7 +122,11 @@ export default {
   },
   mounted() {
     this.$store.dispatch("fetchProducts");
-    // this.$store.dispatch("deleteProduct")
+  },
+  methods: {
+    async deleteContent(prodID) {
+      this.$store.dispatch('deleteProduct', prodID) 
+    }
   }
 };
 </script>
