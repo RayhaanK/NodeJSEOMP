@@ -98,6 +98,21 @@ class Products {
         });
   }
 
+  sortProductsByName(req, res) {
+    const query = `
+    SELECT prodID, prodName, quantity, amount, category, details, content, prodUrl
+    FROM Products
+    ORDER BY prodName;
+    `
+    db.query(query, (err, results) => {
+      if (err) throw err;
+      res.json({
+        status: res.statusCode,
+        results,
+      });
+    });
+  }
+
 }
 
 module.exports = Products;
