@@ -2,7 +2,7 @@
   <section class="sinlgeView" id="singleView">
     <!-- new -->
     <div class="container d-flex justify-content-center">
-      <div class="row">
+      <div class="row" v-if="product">
         <div class="col">
           <div class="card mb-3" style="width: 80%;">
             <div class="row g-0" v-for="product in product" :key="product.prodID">
@@ -31,47 +31,19 @@
           </div>
         </div>
       </div>
-    </div>
-
-
-    <!-- old -->
-    <!-- <div class="container-fluid">
-      <div class="single">
-        <h1>This is a single page</h1>
-        <div class="container d-flex justify-content-center mb-4">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 mx-sm-5">
-            <div class="col g-3 mt-2" v-for="product in product" :key="product.prodID">
-              <div class="card" style="width: 442px">
-                <h4 class="text-center prodTitle">{{ product.prodName }}</h4>
-                <div class="image">
-                  <img :src="product.prodUrl" class="card-img-top img-fluid prodImg" :alt="product.prodName" />
-                </div>
-                <div class="card-body">
-                  <div class="cardText">
-                    <p class="card-text">{{ product.content }}</p>
-                  </div>
-                </div>
-                <div>
-                  <p class="amount text-center">
-                    <span class="boldP"> R{{ product.amount }} </span>
-                  </p>
-                </div>
-                <div class="addCart">
-                  <router-link to="/product"><button class="rbtn">
-                      Back to Products
-                    </button></router-link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div v-else class="row">
+        <spinner/>
       </div>
-    </div> -->
+    </div>
   </section>
 </template>
 
 <script>
+import spinner from "@/components/SpinnerComp.vue"
 export default {
+  components: {
+    spinner
+  },
   props: ["prodID"],
   created() {
     this.$store.dispatch("fetchProduct", this.prodID)

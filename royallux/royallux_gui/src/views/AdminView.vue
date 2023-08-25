@@ -16,7 +16,7 @@
         <addButton/>
       </div>
       <table
-        class="table table-responsive table-bordered border-black table-light table-hover"
+        class="table table-responsive table-bordered border-black table-light table-hover" v-if="products"
       >
         <thead>
           <tr>
@@ -56,6 +56,9 @@
           </tr>
         </tbody>
       </table>
+      <div v-else class="row">
+        <spinner/>
+      </div>
     </div>
     <section class="users" id="users">
       <div class="container-fluid">
@@ -69,7 +72,7 @@
         <userAdd/>
       </div>
       <table
-        class="table table-responsive table-bordered border-black table-secondary table-hover"
+        class="table table-responsive table-bordered border-black table-secondary table-hover" v-if="users"
       >
         <thead>
           <tr>
@@ -113,6 +116,9 @@
           </tr>
         </tbody>
       </table>
+      <div v-else class="row">
+        <spinner/>
+      </div>
     </div>
     </section>
   </section>
@@ -123,9 +129,10 @@ import addButton from "@/components/AddProductComp.vue"
 import editButton from "@/components/EditProductComp.vue"
 import userAdd from "@/components/AddUserComp.vue"
 import userEdit from "@/components/EditUserComp.vue"
+import spinner from "@/components/SpinnerComp.vue"
 export default {
   components: {
-    addButton, editButton, userAdd, userEdit
+    addButton, editButton, userAdd, userEdit, spinner
   },
   computed: {
     products() {
