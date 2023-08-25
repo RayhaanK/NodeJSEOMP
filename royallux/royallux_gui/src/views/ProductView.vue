@@ -2,6 +2,9 @@
   <div class="product m-5">
     <h1 class="display-3 p-3 head">Find Your Luxury Dream</h1>
     <h4 class="p-4">Each Royal Luxury Car is the result of a perfect interplay: consummate technology sophisticated art of engineering and custom craftsmanship make every Royal Luxury Car unique in its class.</h4>
+    <div class="container-fluid">
+      <button class="btn">Sort By Name</button>
+    </div>
     <div class="row products row-cols-1 row-cols-sm-2 row-cols-lg-3 mt-3 mx-sm-5 d-flex justify-content-center" v-if="products">
       <div class="col mt-5"  v-for="product in products" :key="product.prodID">
         <div class="card">
@@ -41,6 +44,7 @@ export default {
     products() {
       return this.$store.state.products;
     },
+
   },
   mounted() {
     this.$store.dispatch("fetchProducts");
