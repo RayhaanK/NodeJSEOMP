@@ -1,26 +1,29 @@
 <template>
-    <div>
-        <button
-        type="button"
-        class="btn2 mb-3"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal1"
-      >
-        Edit
-      </button>
+  <div>
+    <button
+      type="button"
+      class="btn2 mb-3"
+      @click="editModal(product.prodID)"
+      data-bs-toggle="modal"
+      :data-bs-target="'#exampleModal1' + product.prodID"
+    >
+      Edit
+    </button>
     <!-- Modal -->
     <div class="container">
       <div
         class="modal fade"
-        id="exampleModal1"
+        :id="'exampleModal1' + product.prodID"
         tabindex="-1"
-        aria-labelledby="exampleModalLabel"
+        :aria-labelledby="'aexampleModalLabel' + product.prodID"
         aria-hidden="true"
       >
         <div class="modal-dialog">
           <div class="modal-content bg-dark-subtle">
             <div class="modal-header text-center">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Product</h1>
+              <h1 class="modal-title fs-5" id="aexampleModalLabel">
+                Edit Product
+              </h1>
               <button
                 type="button"
                 class="btn-close"
@@ -28,82 +31,88 @@
                 aria-label="Close"
               ></button>
             </div>
-            <form @submit.prevent="submitEditForm(prodID)">
-            <div class="modal-body">
+            <form>
+
+              <div class="modal-body">
                 <p class="title">Product Name</p>
-                <input type="text" id="title" v-model="editProd.prodName"/>
+                <input type="text" id="title" v-model="editProduct.prodName" />
                 <p class="title">Category</p>
-                <input
-                type="text"
-                v-model="editProd.category"
-                id="category"
-                />
+                <input type="text" v-model="editProduct.category" id="category" />
                 <p class="title">Details</p>
-                <input type="text" id="details" v-model="editProd.details"/>
+                <input type="text" id="details" v-model="editProduct.details" />
                 <p class="title">Content</p>
                 <input
                 type="text"
-                v-model="editProd.content"
+                v-model="editProduct.content"
                 id="description"
                 />
                 <p class="title">Price</p>
-                <input type="text" id="amount" v-model="editProd.amount" />
+                <input type="text" id="amount" v-model="editProduct.amount" />
                 <p class="title">Quantity</p>
-                <input
-                type="text"
-                v-model="editProd.quantity"
-                id="quantity"
-                />
+                <input type="text" v-model="editProduct.quantity" id="quantity" />
                 <p class="title">Image Link</p>
-                <input
-                type="text"
-                v-model="editProd.prodUrl"
-                id="imageLink"
-                />
+                <input type="text" v-model="editProduct.prodUrl" id="imageLink" />
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn1" data-bs-dismiss="modal">
                   Close
                 </button>
-                <button
-                type="submit"
-                class="btn1"
-                id="addProduct"
-                >
-                Save changes
-              </button>
-            </div>
-          </form>
+                <button @click="updateProduct(product.prodID)" type="submit" class="btn1" id="addProduct">
+                  Save changes
+                </button>
+                <button  type="reset" class="btn1" id="addProduct">
+                  Clear
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
-    </div>
+  </div>
 </template>
 
 <script>
-    export default {
-        data() {
+export default {
+  props: ["product"],
+  data() {
     return {
-        editProd: {
-          prodName: "",
-          category: "",
-          details: "",
-          content: "",
-          amount: "",
-          quantity: "",
-          prodUrl: "",
-        },
-      };
+      editProduct: {
+        ...this.product,
+      },
+      editProductID: null,
+      editProd: {
+        prodName: "",
+        category: "",
+        details: "",
+        content: "",
+        amount: "",
+        quantity: "",
+        prodUrl: "",
+      },
+    };
   },
-  computed: {
-  },
+  computed: {},
   methods: {
-    async submitEditForm() {
-      this.$store.dispatch('editProduct', this.editProd) 
+    // async submitEditForm() {
+    //   this.$store.dispatch("editProduct", this.editProd);
+    // },
+    editModal(prodID) {
+      this.editProductID = prodID
+      this.editProduct = {
+        ...this.$store.state.products.find(
+          (product) => product.prodID === prodID
+        )
+      }
+    },
+    updateProduct(prodID) {
+      this.$store.dispatch("editProduct", { 
+        prodID: prodID,
+        ...this.editProduct
+      })
     }
-  } 
-    }
+  },
+};
 </script>
 
 <style scoped>
