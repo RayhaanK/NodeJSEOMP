@@ -14,48 +14,51 @@
         <section class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img class="imgf" src="https://i.postimg.cc/XYKbQyRq/002-B800-3-4-front-1920x1281.jpg" alt="avatar" />
+              <img class="imgf" src="https://i.postimg.cc/1zQ9x09y/Screenshot-2023-08-25-124058.png" alt="avatar" />
             </div>
             <div class="flip-card-back">
-              <h4>The best luxury car starts with the best price. That is why we promise to give you the best vehicles and service with the guaranteed best price.</h4>
+              <h4>The best luxury car starts with the best price. That is why we promise to give you the best vehicles and
+                service with the guaranteed best price.</h4>
             </div>
           </div>
         </section>
         <section class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img class="imgf" src="https://i.postimg.cc/XYKbQyRq/002-B800-3-4-front-1920x1281.jpg" alt="avatar" />
+              <img class="imgf" src="https://i.postimg.cc/8cNHqz5y/Screenshot-2023-08-25-124106.png" alt="avatar" />
             </div>
             <div class="flip-card-back">
-              <h4>You can rest assured that even though you are getting the best service you are also getting the best price with that service.</h4>
+              <h4>You can rest assured that even though you are getting the best service you are also getting the best
+                price with that service.</h4>
             </div>
           </div>
         </section>
         <section class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img class="imgf" src="https://i.postimg.cc/XYKbQyRq/002-B800-3-4-front-1920x1281.jpg" alt="avatar" />
+              <img class="imgf" src="https://i.postimg.cc/0Q5Pj8M3/Screenshot-2023-08-25-124117.png" alt="avatar" />
             </div>
             <div class="flip-card-back">
-              <h4>We will beat any competitor price on the same vehicle and model. Send us any quote on a luxury vehicle, and we will beat that quote for you, our most valued customer.</h4>
+              <h4>We will beat any competitor price on the same vehicle and model. Send us any quote on a luxury vehicle,
+                and we will beat that quote for you, our most valued customer.</h4>
             </div>
           </div>
         </section>
         <section class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img class="imgf" src="https://i.postimg.cc/XYKbQyRq/002-B800-3-4-front-1920x1281.jpg" alt="avatar" />
+              <img class="imgf" src="https://i.postimg.cc/52vxkKWP/Screenshot-2023-08-25-124130.png" alt="avatar" />
             </div>
             <div class="flip-card-back">
-              <h4>We promise to give you the best experience with your luxury. We will ensure you have the best experience with us for drive in Cape Town. </h4>
+              <h4>We promise to give you the best experience with your luxury. We will ensure you have the best experience
+                with us for drive in Cape Town. </h4>
             </div>
           </div>
         </section>
       </div>
     </div>
     <!-- accordian -->
-    <div class="container-fluid" style="width: 5
-    0rem;">
+    <div class="container-fluid" style="width: 50rem;">
       <div class="info mx-auto p-5" style="font-size: 1.5rem;">
         <h1 class="display-3 who">Read More</h1>
         <div class="accordion" id="accordionExample">
@@ -152,7 +155,7 @@
 .flip-card {
   background-color: transparent;
   width: 300px;
-  height: 15rem;
+  height: 16.5rem;
   perspective: 1000px;
 }
 
@@ -186,7 +189,7 @@
 }
 
 .imgf {
-  width: 20rem;
+  width: 17rem;
 }
 
 .flip-card-back {

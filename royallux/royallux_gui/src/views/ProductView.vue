@@ -1,9 +1,9 @@
 <template>
   <div class="product m-5">
-    <h1 class="p-3">Find Your Luxury Dream</h1>
+    <h1 class="display-3 p-3 head">Find Your Luxury Dream</h1>
     <h4 class="p-4">Each Royal Luxury Car is the result of a perfect interplay: consummate technology sophisticated art of engineering and custom craftsmanship make every Royal Luxury Car unique in its class.</h4>
     <div class="row products row-cols-1 row-cols-sm-2 row-cols-lg-3 mt-3 mx-sm-5 d-flex justify-content-center">
-      <div class="col"  v-for="product in products" :key="product.prodID">
+      <div class="col mt-5"  v-for="product in products" :key="product.prodID">
         <div class="card">
           <img :src="product.prodUrl" class="card-img-top"
             :alt="product.prodName">
@@ -19,7 +19,7 @@
                   name: 'single',
                   params: { prodID: product.prodID }
                   }"
-               ><button class="rbtn mt-2">View Product</button></router-link>
+               ><button class="btn mt-2">View Product</button></router-link>
             </div>
           </div>
         </div>
@@ -44,7 +44,9 @@ export default {
 </script>
 
 <style scoped>
-
+.head {
+  text-shadow: 3px 2px 3px rgb(118, 112, 112);
+}
 .card {
   border: none;
 }
@@ -58,21 +60,22 @@ export default {
   overflow: auto;
 }
 
-.rbtn {
-  background-color: #84a7a1;
-  color: #001847;
+.btn {
+  background-color: #000000;
+  color: #ffffff;
   border-radius: 1rem;
   padding: 0.3rem;
   border: 0;
   width: 7rem;
 }
 
-.rbtn:hover {
-  background-color: #001847;
-  color: #84a7a1;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
-  transition: 0.2s;
-  transform: scale(1.05);
+.btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid black;
+  /* box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7); */
+  /* transition: 0.2s;
+  transform: scale(1.05); */
 }
 
 ::-webkit-scrollbar {
