@@ -44,7 +44,7 @@
             </td>
             <td>
               <div class="tableRows">
-                <editButton/>
+                <editButton :product="product"/>
                 <button @click.prevent="deleteContent(product.prodID)" class="btn1" id="deleteBtn">Delete</button>
               </div>
             </td>
@@ -66,9 +66,13 @@ export default {
     products() {
       return this.$store.state.products;
     },
+    product() {
+      return this.$store.state.product;
+    },
   },
   mounted() {
     this.$store.dispatch("fetchProducts");
+    this.$store.dispatch("fetchProduct");
   },
   methods: {
     async deleteContent(prodID) {

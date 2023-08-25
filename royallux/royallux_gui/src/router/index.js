@@ -31,7 +31,13 @@ const routes = [
     name: 'single',
     props: true,
     component: () => import('../views/SingleView.vue')
-  }
+  },
+  // {
+  //   path: '/edit/:prodID',
+  //   name: 'single',
+  //   props: true,
+  //   component: () => import('../views/SingleView.vue')
+  // }
 ]
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
