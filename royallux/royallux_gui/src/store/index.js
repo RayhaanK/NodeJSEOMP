@@ -47,6 +47,12 @@ export default createStore({
     },
     setFeatProducts(state, products) {
       state.products = products
+    },
+    dltUser(state, user) {
+      state.user = user;
+    },
+    editUser(state, user) {
+      state.user = user
     }
   },
   actions: {
@@ -58,6 +64,16 @@ export default createStore({
         context.commit("setMsg", "An error has occured");
       }
     },
+
+    async fetchUser(context, userID) {
+      try {
+        const { data } = await axios.get(`${dataUrl}user/${userID}`);
+        context.commit("setUser", data.results);
+      } catch (e) {
+        context.commit("setMsg", "An error has occured");
+      }
+    },
+
     async fetchProducts(context) {
       try {
         const { data } = await axios.get(`${dataUrl}products`);
@@ -74,6 +90,7 @@ export default createStore({
         context.commit("setMsg", "An error occured")
       }
     },
+    // Product CRUD
     async submitProduct(context, payload) {
       try {
         const response = await axios.post(`${dataUrl}product`, payload);
@@ -105,8 +122,8 @@ export default createStore({
       try {
         const response = await axios.patch(`${dataUrl}product/${payload.prodID}`, payload);
         if(response) {
-          context.commit('dltProduct', response)
-          // location.reload()
+          context.commit('editProduct', response)
+          location.reload()
         } else {
           context.commit("setMsg", "An error has occured");
         }
@@ -122,6 +139,48 @@ export default createStore({
         context.commit("setMsg", "An error has occured");
       }
     },
+    // User CRUD
+    async submitUser(context, payload) {
+      try {
+        const response = await axios.post(`${dataUrl}user`, payload);
+        if (response) {
+          context.commit("setUser", response.data);
+          location.reload()
+          console.log(response.data);
+        } else {
+          context.commit("setMsg", "An error has occured");
+        }
+      } catch (e) {
+        context.commit("setMsg", "An error has occured");
+      }
+    },
+    async deleteUser(context, userID) {
+      try {
+        const response = await axios.delete(`${dataUrl}user/${userID}`);
+        if(response) {
+          location.reload()
+          context.commit('dltUser', response)
+        } else {
+          context.commit("setMsg", "An error has occured");
+        }
+      } catch (e) {
+        context.commit("setMsg", "An error has occured");
+      }
+    },
+    async editUser(context, payload) {
+      try {
+        const data = await axios.patch(`${dataUrl}user/${payload.userID}`, payload);
+        const {msg} = await data
+        if(msg) {
+          context.commit('setMsg', msg)
+          context.dispatch('fetchUsers')
+        } else {
+          context.commit("setMsg", "An error has occured");
+        }
+      } catch (e) {
+        context.commit("setMsg", "An error has occured");
+      }
+    }, 
   },
 
   modules: {},

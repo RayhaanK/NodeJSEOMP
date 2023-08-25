@@ -2,9 +2,14 @@
   <section id="admin" class="adm">
     <div class="container-fluid">
       <h1
-        class="display-1 text-center mb-2 p-4"
+        class="display-2 text-center mt-2"
       >
-        Admin Interface
+        Admin <hr>
+      </h1>
+      <h1
+        class="display-3 text-center mb-2 p-2"
+      >
+        Product Interface
       </h1>
       <div class="container-fluid">
         <button class="btn2 float-start" id="sort">Sort By ID(asc/desc)</button>
@@ -52,15 +57,75 @@
         </tbody>
       </table>
     </div>
+    <section class="users" id="users">
+      <div class="container-fluid">
+      <h1
+        class="display-3 text-center mb-2 p-4"
+      >
+        User Interface
+      </h1>
+      <div class="container-fluid">
+        <button class="btn2 float-start" id="sort">Sort By ID(asc/desc)</button>
+        <userAdd/>
+      </div>
+      <table
+        class="table table-responsive table-bordered border-black table-secondary table-hover"
+      >
+        <thead>
+          <tr>
+            <th scope="col">ID#</th>
+            <th scope="col">Image</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">User Role</th>
+            <th scope="col">Email Adress</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="user in users" :key="user.userID">
+            <th>
+              <div class="tableRows">{{ user.userID}}</div>
+            </th>
+            <td>
+              <div class="tableRows">
+                <img class="img-fluid" :src="user.userProfile" :alt="user.firstName" loading="lazy" />
+              </div>
+            </td>
+            <td>
+              <div class="tableRows">{{ user.firstName }}  {{ user.lastName }}</div>
+            </td>
+            <td>
+              <div class="tableRows">{{ user.gender }}</div>
+            </td>
+            <td>
+              <div class="tableRows">{{ user.userRole }}</div>
+            </td>
+            <td>
+              <div class="tableRows">{{ user.emailAdd }}</div>
+            </td>
+            <td>
+              <div class="tableRows">
+                <userEdit :user="user"/>
+                <button @click.prevent="deleteUser(user.userID)" class="btn1" id="deleteBtn">Delete</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </section>
   </section>
 </template>
 
 <script>
 import addButton from "@/components/AddProductComp.vue"
 import editButton from "@/components/EditProductComp.vue"
+import userAdd from "@/components/AddUserComp.vue"
+import userEdit from "@/components/EditUserComp.vue"
 export default {
   components: {
-    addButton, editButton
+    addButton, editButton, userAdd, userEdit
   },
   computed: {
     products() {
@@ -69,14 +134,25 @@ export default {
     product() {
       return this.$store.state.product;
     },
+    users() {
+      return this.$store.state.users;
+    },
+    user() {
+      return this.$store.state.user;
+    },
   },
   mounted() {
     this.$store.dispatch("fetchProducts");
     this.$store.dispatch("fetchProduct");
+    this.$store.dispatch("fetchUsers");
+    this.$store.dispatch("fetchUser");
   },
   methods: {
     async deleteContent(prodID) {
       this.$store.dispatch('deleteProduct', prodID) 
+    },
+    async deleteUser(userID) {
+      this.$store.dispatch('deleteUser', userID) 
     }
   }
 };

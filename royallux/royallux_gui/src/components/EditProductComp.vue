@@ -5,7 +5,7 @@
       class="btn2 mb-3"
       @click="editModal(product.prodID)"
       data-bs-toggle="modal"
-      :data-bs-target="'#exampleModal1' + product.prodID"
+      :data-bs-target="'#dexampleModal' + product.prodID"
     >
       Edit
     </button>
@@ -13,7 +13,7 @@
     <div class="container">
       <div
         class="modal fade"
-        :id="'exampleModal1' + product.prodID"
+        :id="'dexampleModal' + product.prodID"
         tabindex="-1"
         :aria-labelledby="'aexampleModalLabel' + product.prodID"
         aria-hidden="true"
@@ -92,11 +92,9 @@ export default {
       },
     };
   },
-  computed: {},
+  computed: {
+  },
   methods: {
-    // async submitEditForm() {
-    //   this.$store.dispatch("editProduct", this.editProd);
-    // },
     editModal(prodID) {
       this.editProductID = prodID
       this.editProduct = {
