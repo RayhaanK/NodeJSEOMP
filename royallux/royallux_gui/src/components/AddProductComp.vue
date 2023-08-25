@@ -122,16 +122,19 @@ export default {
 }
 
 .btn2 {
-  background-color: #f7f7f7;
+  background-color: #000000;
+  color: white;
   width: 9rem;
   padding: 0.3rem;
   border-radius: 10px;
-  border: none;
+  border: 1px solid black;
 }
 
 .btn2:hover {
-  background-color: #f7f7f7d3;
+  background-color: #fffdfd;
+  color: black;
 }
+
 
 input {
   width: 100%;

@@ -3,37 +3,37 @@
         <div class="container-fluid ">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon custom-toggler"></span>
             </button>
             <div class="collapse navbar-collapse nav-con" id="navbarSupportedContent">
                 <div class="routes">
-                <ul class="navbar-nav mb-lg-0 nav-underline">
-                    <li class="nav-item" id="homea">
-                        <router-link to="/" class="nav-link">Home</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link to="/about" class="nav-link">About</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link to="/product" class="nav-link">Products</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link to="/contact" class="nav-link">Contact</router-link>
-                    </li>
-                </ul>
-            </div>
+                    <ul class="navbar-nav mb-lg-0 nav-underline">
+                        <li class="nav-item" id="homea">
+                            <router-link to="/" class="nav-link">Home</router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link to="/about" class="nav-link">About</router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link to="/product" class="nav-link">Products</router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link to="/contact" class="nav-link">Contact</router-link>
+                        </li>
+                    </ul>
+                </div>
                 <!-- logo -->
                 <ul class="logos m-auto">
-                <router-link to="/"><img class="logo"
-                                src="https://i.postimg.cc/c4HWTjFg/Screenshot-2023-08-22-112515-removebg-preview.png"
-                                alt="logo" style="width: 11rem; "></router-link>
+                    <router-link to="/"><img class="logo"
+                            src="https://i.postimg.cc/c4HWTjFg/Screenshot-2023-08-22-112515-removebg-preview.png" alt="logo"
+                            style="width: 11rem; "></router-link>
                 </ul>
                 <!-- admin -->
                 <ul class="adin ms-auto">
                     <li class="nav-item right ">
                         <router-link to="/admin" class="nav-link"><i class="bi bi-person" style="color: white;"></i>
                             Admin</router-link>
-                        </li>
+                    </li>
                 </ul>
                 <!-- <form class="d-flex" role="search">
                     <input class="form-control m-2 sea" type="search" placeholder="Search Something" aria-label="Search">
@@ -52,8 +52,8 @@ nav {
     background-color: #000000;
 }
 
-.logos{
-    margin-right: 18rem ;
+.logos {
+    margin-right: 18rem;
 }
 
 
@@ -76,6 +76,10 @@ nav a.router-link-exact-active {
 ul {
     text-decoration: none;
 }
+  
+/* .custom-toggler .navbar-toggler-icon {
+           background-color: white;
+        } */
 @media (max-width: 1400px) {
     /* img {
         width: 9rem;
@@ -91,8 +95,11 @@ ul {
 }
 
 @media (max-width: 992px) {
-    /* .nav-con{
-    display: none !important;
-} */
+    .logos{
+    display: none;
+}
+.adin{
+    padding: 10px;
+}
 }
 </style>

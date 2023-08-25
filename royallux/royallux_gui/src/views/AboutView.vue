@@ -189,7 +189,7 @@
 }
 
 .imgf {
-  width: 17rem;
+  width: 17.5rem;
 }
 
 .flip-card-back {
