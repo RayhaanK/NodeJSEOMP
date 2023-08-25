@@ -42,6 +42,10 @@ routes.get('/product/:id', (req, res)=>{
     products.fetchProduct(req, res)
 })
 
+routes.get('/product', (req, res)=>{
+    products.sortProductsByName(req, res)
+})
+
 routes.get('/featured', (req, res)=> {
     products.featuredProducts(req, res)
 })
