@@ -45,6 +45,9 @@ export default createStore({
     editProduct(state, product) {
       state.product = product;
     },
+    setFeatProducts(state, products) {
+      state.products = products
+    }
   },
   actions: {
     async fetchUsers(context) {
@@ -110,7 +113,15 @@ export default createStore({
       } catch (e) {
         context.commit("setMsg", "An error has occured");
       }
-    },  
+    }, 
+    async fetchFeatProducts(context) {
+      try {
+        const { data } = await axios.get(`${dataUrl}featured`);
+        context.commit("setFeatProducts", data.results);
+      } catch (e) {
+        context.commit("setMsg", "An error has occured");
+      }
+    },
   },
 
   modules: {},
