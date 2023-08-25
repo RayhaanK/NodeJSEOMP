@@ -8,4 +8,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import './assets/css/style.css'
 
-createApp(App).use(store).use(router).mount('#app')
+// AOS
+//AOS
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+createApp(App).use(store).use(AOS.init()).use(router).mount('#app')

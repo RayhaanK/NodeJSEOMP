@@ -22,7 +22,7 @@
       <!-- content -->
       <h1 class="display-3 mt-5 who">BRANDS</h1>
       <div class="container-fluid d-flex justify-content-center" style="height: 100%;">
-        <div class="row p-3 br">
+        <div data-aos class="row p-3 br flip-left">
           <div class="col mx-3"><img src="https://i.postimg.cc/sfYkk7wM/logo-2.png" alt="logo1"
               style="width: 11rem; height: 12rem;"></div>
           <div class="col mx-3"><img src="https://i.postimg.cc/Wzwx0chG/logo-5.png" alt="logo2"
@@ -40,15 +40,15 @@
         </div>
       </div>
     </div>
-    <hr>
     <div class="container-fluid p-4">
       <h1 class="display-4 mt-5 who">COMMITMENT TO PERFORMANCE</h1>
       <div class="container text-center">
         <div class="row">
           <div class="col">
           </div>
-          <div class="col-6">
-            <h2 class="p-4 par">Founded on the passion for cars and the commitment to offering a superior level of service to
+          <div class="col-7">
+            <h2 class="p-4 par">Founded on the passion for cars and the commitment to offering a superior level of service
+              to
               motoring enthusiasts. Providing all-inclusive vehicles for clients, Royal Lux Motors specializes in classic
               and modern luxury vehicles.</h2>
           </div>
@@ -156,9 +156,11 @@
 .carousel-item {
   width: 100%;
 }
-.par{
+
+.par {
   line-height: 3.5rem;
 }
+
 .car {
   width: 100%;
   height: 770px;
@@ -195,6 +197,14 @@
 .vm {
   background: black;
   color: white;
+  font-size: 1.3rem;
+}
+
+.vm:hover {
+  background: white;
+  color: #000000;
+  font-size: 22px;
+  transition: 0.4s ease-in-out;
 }
 
 /* Clear floats after image containers */
@@ -230,5 +240,4 @@
     padding-bottom: 23rem;
     font-size: 2rem;
   }
-} */
-</style>
+} */</style>
