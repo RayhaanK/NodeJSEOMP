@@ -9,6 +9,7 @@
       has been our home since 1977. From here we cater to our international customers in over 100 countries.</p>
     <!-- flip-card -->
     <div class="container">
+      <h1 class="display-2 p-4 who">Brand Promise</h1>
       <div class="row mx-auto">
         <section class="flip-card">
           <div class="flip-card-inner">
@@ -16,7 +17,7 @@
               <img class="imgf" src="https://i.postimg.cc/XYKbQyRq/002-B800-3-4-front-1920x1281.jpg" alt="avatar" />
             </div>
             <div class="flip-card-back">
-              <h1>CONTENT</h1>
+              <h4>The best luxury car starts with the best price. That is why we promise to give you the best vehicles and service with the guaranteed best price.</h4>
             </div>
           </div>
         </section>
@@ -26,7 +27,7 @@
               <img class="imgf" src="https://i.postimg.cc/XYKbQyRq/002-B800-3-4-front-1920x1281.jpg" alt="avatar" />
             </div>
             <div class="flip-card-back">
-              <h1>CONTENT</h1>
+              <h4>You can rest assured that even though you are getting the best service you are also getting the best price with that service.</h4>
             </div>
           </div>
         </section>
@@ -36,7 +37,7 @@
               <img class="imgf" src="https://i.postimg.cc/XYKbQyRq/002-B800-3-4-front-1920x1281.jpg" alt="avatar" />
             </div>
             <div class="flip-card-back">
-              <h1>CONTENT</h1>
+              <h4>We will beat any competitor price on the same vehicle and model. Send us any quote on a luxury vehicle, and we will beat that quote for you, our most valued customer.</h4>
             </div>
           </div>
         </section>
@@ -46,70 +47,71 @@
               <img class="imgf" src="https://i.postimg.cc/XYKbQyRq/002-B800-3-4-front-1920x1281.jpg" alt="avatar" />
             </div>
             <div class="flip-card-back">
-              <h1>CONTENT</h1>
+              <h4>We promise to give you the best experience with your luxury. We will ensure you have the best experience with us for drive in Cape Town. </h4>
             </div>
           </div>
         </section>
       </div>
     </div>
     <!-- accordian -->
-    <div class="container-fluid">
-
-      <div class="info mx-auto p-5" style= "font-size: 1.5rem;">
+    <div class="container-fluid" style="width: 5
+    0rem;">
+      <div class="info mx-auto p-5" style="font-size: 1.5rem;">
         <h1 class="display-3 who">Read More</h1>
         <div class="accordion" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header text-center">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-              aria-expanded="true" aria-controls="collapseOne">
-              <h4> RECORD-BREAKING INNOVATIVENESS</h4>
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>For more than four decades,</strong> we've been pushing forward with a lot of performance and heart
-              and soul - just like our high-performance engines: with a lot of thrust and it keeps pushing, always
-              pushing. Always new models. More and more displacement, horsepower and torque. More and more innovation.
-              More and more interior equipment, safety and environmental compatibility. More and more exclusivity. And
-              more and more records.
+                aria-expanded="true" aria-controls="collapseOne">
+                <h4> RECORD-BREAKING INNOVATIVENESS</h4>
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>For more than four decades,</strong> we've been pushing forward with a lot of performance and
+                heart
+                and soul - just like our high-performance engines: with a lot of thrust and it keeps pushing, always
+                pushing. Always new models. More and more displacement, horsepower and torque. More and more innovation.
+                More and more interior equipment, safety and environmental compatibility. More and more exclusivity. And
+                more and more records.
+              </div>
             </div>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              <h4>OVER 40 YEARS OF EXPERTISE</h4>
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>With our automotive know-how from over 40 years,</strong> we sold classic cars with their fully
-              original condition with great attention to detail as part of our 6-star quality. This is what we call
-              "six-star quality", and many of the oldies from Classics to Hybrids to achieve the same high level of
-              quality striaght from the factory.
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <h4>OVER 40 YEARS OF EXPERTISE</h4>
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>With our automotive know-how from over 40 years,</strong> we sold classic cars with their fully
+                original condition with great attention to detail as part of our 6-star quality. This is what we call
+                "six-star quality", and many of the oldies from Classics to Hybrids to achieve the same high level of
+                quality striaght from the factory.
+              </div>
             </div>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            <h4>COMMITMENT TO PERFORMANCE</h4>
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <strong>It is the passion for the automobile,</strong> the will for performance, the drive for perfection,
-            the striving for the superlative, but also the feeling for aesthetics and the sense for functionality that
-            distinguish Royal Lux Motors.
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <h4>COMMITMENT TO PERFORMANCE</h4>
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>It is the passion for the automobile,</strong> the will for performance, the drive for perfection,
+                the striving for the superlative, but also the feeling for aesthetics and the sense for functionality that
+                distinguish Royal Lux Motors.
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-</div>
 </template>
 
 <style scoped>
