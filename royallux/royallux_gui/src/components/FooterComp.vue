@@ -12,18 +12,18 @@
                     <ul>
                         <li class="p-3"><router-link class="rl" to="/products">Products</router-link></li>
                         <li class="p-3"><router-link class="rl" to="/contact">Contact</router-link></li>
-                        <li class="p-3">
+                        <li class="p-3"> <hr> <h5 style="color: white;">Follow our Social Media</h5> 
                             <i class="social bi bi-instagram"><a href="https://www.instagram.com/"></a></i>
                             <i class="social bi bi-tiktok"><a href="https://www.tiktok.com/login"></a></i>
                             <i class="social bi bi-facebook"><a href="https://m.facebook.com/login/?locale=en_GB"></a></i>
                         </li>
-                        <p class="text-white fcols1">Royal Lux Motors, Copyright&copy;</p>
+                        <p class="text-white fcols1">&copy; 2023 Royal Lux Motors, All Rights Reserved. </p>
                     </ul>
                 </div>
                 <div class="col-3 fcols1">
                     <ul>
                         <li class="p-3"><i class="bi bi-telephone social1">+27 12 345 6789</i></li>
-                        <li class="p-3"><i class="bi bi-envelope social1"> royalLux@gmail.com</i></li>
+                        <li class="p-3"><i class="bi bi-envelope social1">royalLux@gmail.com</i></li>
                     </ul>
                 </div>
 
