@@ -44,16 +44,16 @@
       <h1 class="display-4 mt-5 who">COMMITMENT TO PERFORMANCE</h1>
       <div class="container text-center">
         <div class="row">
+          <!-- <div class="col">
+          </div> -->
           <div class="col">
-          </div>
-          <div class="col-7">
             <h2 class="p-4 par">Founded on the passion for cars and the commitment to offering a superior level of service
               to
               motoring enthusiasts. Providing all-inclusive vehicles for clients, Royal Lux Motors specializes in classic
               and modern luxury vehicles.</h2>
           </div>
-          <div class="col">
-          </div>
+          <!-- <div class="col">
+          </div> -->
         </div>
       </div>
 
@@ -220,7 +220,9 @@ export default {
   clear: both;
   display: table;
 }
+@media screen and (max-width: 992px) {
 
+}
 /* 
 @media screen and (min-width: 650px) {
   .carousel {

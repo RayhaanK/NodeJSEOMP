@@ -11,14 +11,14 @@
         <addButton/>
       </div>
       <table
-        class="table table-responsive table-bordered border-black table-secondary table-hover"
+        class="table table-responsive table-bordered border-black table-light table-hover"
       >
         <thead>
           <tr>
             <th scope="col">ID#</th>
             <th scope="col">Title</th>
-            <th scope="col">Image</th>
-            <th scope="col">Description</th>
+            <th scope="col d-none d-sm-block">Image</th>
+            <th scope="col d-none d-sm-block">Description</th>
             <th scope="col">Amount</th>
             <th scope="col">Actions</th>
           </tr>
@@ -32,12 +32,12 @@
               <div class="tableRows">{{ product.prodName }}</div>
             </td>
             <td>
-              <div class="tableRows">
+              <div class="tableRows d-none d-sm-block">
                 <img class="img-fluid" :src="product.prodUrl" :alt="product.prodName" loading="lazy" />
               </div>
             </td>
             <td>
-              <div class="tableRows">{{ product.details }}</div>
+              <div class="tableRows d-none d-sm-block">{{ product.details }}</div>
             </td>
             <td>
               <div class="tableRows">R{{ product.amount }}</div>
@@ -83,28 +83,33 @@ export default {
 </script>
 
 <style scoped>
+
 .btn1 {
-  background-color: #f7f7f7;
+  background-color: #000000;
+  color: white;
   padding: 0.3rem;
   border-radius: 10px;
   width: 4rem;
-  border: none;
+  border: 1px solid black;
 }
 
 .btn1:hover {
-  background-color: #f7f7f788;
+  background-color:white;
+  color: black;
 }
 
 .btn2 {
-  background-color: #f7f7f7;
+  background-color: #000000;
+  color: white;
   width: 9rem;
   padding: 0.3rem;
   border-radius: 10px;
-  border: none;
+  border: 1px solid black;
 }
 
 .btn2:hover {
-  background-color: #f7f7f7d3;
+  background-color: #fffdfd;
+  color: black;
 }
 
 img {
@@ -127,5 +132,7 @@ th {
 td {
   height: 150px;
 }
+@media screen and (max-width: 808px) {
 
+}
 </style>
