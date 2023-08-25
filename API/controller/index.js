@@ -42,7 +42,7 @@ routes.get('/product/:id', (req, res)=>{
     products.fetchProduct(req, res)
 })
 
-routes.get('/product', (req, res)=>{
+routes.get('/nameproduct', (req, res)=>{
     products.sortProductsByName(req, res)
 })
 
