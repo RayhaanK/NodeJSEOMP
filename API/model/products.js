@@ -86,7 +86,7 @@ class Products {
   featuredProducts(req, res) {
     const query = `
               SELECT prodID, prodName, quantity, amount, category, details, content, prodUrl
-              FROM Products;
+              FROM Products
               LIMIT 4
               `;
         db.query(query, (err, results) => {
