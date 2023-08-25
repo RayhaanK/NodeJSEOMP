@@ -43,8 +43,6 @@
                 <input type="text" v-model="editUser.gender" id="gender" />
                 <p class="title">Email Address</p>
                 <input type="text" id="email" v-model="editUser.emailAdd" />
-                <p class="title">Password</p>
-                <input type="text" v-model="editUser.userPass" id="quantity" />
                 <p class="title">Profile Image</p>
                 <input
                   type="text"
@@ -93,7 +91,6 @@ export default {
           gender: "",
           userRole: "",
           emailAdd: "",
-          userPass: "",
           userRole: "",
           userProfile: "",
       },
@@ -106,7 +103,7 @@ export default {
         ...this.$store.state.users.find((user) => user.userID === userID),
       };
     },
-    updateUser(editUser) {
+    updateUser(userID) {
       this.$store.dispatch("editUser", {
         userID: userID,
         ...this.editUser,

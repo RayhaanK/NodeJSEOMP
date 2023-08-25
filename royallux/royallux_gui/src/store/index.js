@@ -170,10 +170,9 @@ export default createStore({
     async editUser(context, payload) {
       try {
         const data = await axios.patch(`${dataUrl}user/${payload.userID}`, payload);
-        const {msg} = await data
-        if(msg) {
-          context.commit('setMsg', msg)
-          context.dispatch('fetchUsers')
+        if(data) {
+          context.commit('setMsg', data)
+          // location.reload()
         } else {
           context.commit("setMsg", "An error has occured");
         }
