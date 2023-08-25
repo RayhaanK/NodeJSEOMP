@@ -42,7 +42,7 @@ routes.get('/product/:id', (req, res)=>{
     products.fetchProduct(req, res)
 })
 
-routes.get('featproducts', (req, res)=> {
+routes.get('/featured', (req, res)=> {
     products.featuredProducts(req, res)
 })
 
